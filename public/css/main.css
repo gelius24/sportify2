@@ -1,0 +1,78 @@
+main {
+    background-color: var(--spotifyBlack);
+    padding: 20px;
+    margin: 8px 8px 0 0;
+    border-radius: 10px;
+    overflow-x: hidden;
+}
+
+header {
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.arrows {
+    color: white;
+    display: flex;
+    gap: 15px;
+}
+
+.arrows .btn{
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.808);
+    border-radius: 100%;
+}
+
+.right-side {
+    display: flex;
+    gap: 6px;
+}
+
+.right-side p {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.959);
+    border-radius: 20px;
+    padding: 10px 18px;
+    font-size: 0.875rem;
+}
+
+.premiumBtn{
+    color: black !important;
+    background-color: white !important;
+}
+
+.right-side i {
+    color: white;
+    
+    border-radius: 100%;
+    
+}
+
+.right-side span {
+    background-color: black;
+    border-radius: 100%;
+    padding: 7px;
+    
+}
+
+.avatar-box{
+    width: 35px;
+    height: 35px;
+    background-color: black;
+    border-radius: 100%;
+}
+
+
+
+
+/**/
+@media (width < 981px) {
+    .right-side{
+        display: none;
+    }
+}
+
+
+  

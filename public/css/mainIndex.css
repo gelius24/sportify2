@@ -1,0 +1,25 @@
+h2 {
+    color: white;
+}
+
+header {
+    background-color: black;
+}
+
+button{
+    padding: 0.8em;
+    margin: auto;
+    border-radius: 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.right-side p:first-child {
+    background-color: black !important;
+    color: white !important;
+}
+.right-side p:last-child {
+    background-color: white;
+    color: black;
+}
