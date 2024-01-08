@@ -4,6 +4,7 @@ main {
     margin: 8px 8px 0 0;
     border-radius: 10px;
     overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 header {
@@ -63,8 +64,6 @@ header {
     background-color: black;
     border-radius: 100%;
 }
-
-
 
 
 /**/

@@ -11,7 +11,7 @@ app.use(express.json());
 
 // LOGIN & OBTAIN CODE IN QUERY
 app.get("/login", (req, res) => {
-  var scope = "user-read-private user-read-email user-top-read user-read-recently-played";
+  var scope = "user-read-private user-read-email user-top-read user-read-recently-played user-library-read";
   res.redirect(
     "https://accounts.spotify.com/authorize?" +
       QueryString.stringify({
@@ -33,6 +33,7 @@ app.get("/getToken", async (req, res) => {
   .then(fetchers.fetchNewRelease(access_token))
   .then(fetchers.fetchUserPlaylists(access_token))
   .then(fetchers.fetchPopularPlaylist(access_token))
+  .then(fetchers.fetchUserAlbums(access_token))
   res.redirect('/home.html');
 })
 

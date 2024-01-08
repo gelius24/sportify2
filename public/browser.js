@@ -4,6 +4,7 @@ import recentSongs from "./data/recentSongs.js";
 import newReleases from "./data/newReleases.js"
 import userPlaylists from "./data/userPlaylists.js";
 import popularPlaylists from "./data/popularPlaylists.js"
+import userAlbums from "./data/userAlbums.js"
 
 function populateUI(profile) {
   document.getElementById("displayName").innerText = profile.display_name;
@@ -88,6 +89,21 @@ function placePlaylists(data) {
     `)
   })
 }
+//
+function placeSavedAlbums(data) {
+  const biblio = document.querySelector("section.biblio")
+  data.items.forEach((album) => {
+    biblio.insertAdjacentHTML("beforeend", `
+    <div class="shelf">
+          <img src=${album.album.images[1].url} alt="album picture">
+          <div class="info">
+            <p class="info1">${album.album.name}</p>
+            <p class="info2">Album * ${album.album.artists[0].name}</p>
+        </div>
+      </div>
+    `)
+  })
+}
 
 // TODO à faire au chargement de la page !
 window.addEventListener("load", () => {
@@ -97,4 +113,5 @@ window.addEventListener("load", () => {
   placeNewReleases(newReleases);
   placePlaylists(userPlaylists);
   placePopularPlaylist(popularPlaylists);
+  placeSavedAlbums(userAlbums);
 });

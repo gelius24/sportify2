@@ -162,6 +162,9 @@ h3 {
     .cards{
         --cells: 4;
     }
+    :root{
+        --asideWidth: 350px;
+    }
 }
 
 @media (width < 1040px) {

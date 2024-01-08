@@ -77,6 +77,16 @@ async function fetchUserPlaylists(token) {
     writeFileSync('./public/data/userPlaylists.js', `const userPlaylists = ${JSON.stringify(playlist)}; export default userPlaylists`);
 }
 
+// saved albums 
+async function fetchUserAlbums(token) {
+    const data = await fetch('https://api.spotify.com/v1/me/albums?limit=8', {
+        method:"GET",
+        headers: {Authorization: `Bearer ${token}`}
+    })
+    const savedAlbum = await data.json();
+    writeFileSync('./public/data/userAlbums.js', `const userAlbums = ${JSON.stringify(savedAlbum)}; export default userAlbums`);
+}
+
 // popular playlists
 async function fetchPopularPlaylist(token) {
     var data = await fetch('https://api.spotify.com/v1/browse/featured-playlists?limit=6', {
@@ -94,5 +104,6 @@ module.exports = {
     fetchRecentSongs, 
     fetchNewRelease,
     fetchUserPlaylists,
-    fetchPopularPlaylist
+    fetchPopularPlaylist,
+    fetchUserAlbums
 }
