@@ -9,7 +9,7 @@ aside {
 /* TOP */
 .top-box {
   background-color: var(--spotifyBlack);
-  height: 10%;
+  height: 10vh;
   min-height: 120px;
   padding: 20px; 
   border-radius: 5px;
@@ -30,7 +30,7 @@ aside {
   padding: 20px;
   padding-bottom: 0px;
   border-radius: 5px;
-  height: 100%;
+  height: 90vh;
 }
 
 .asideBottom-line1 {
@@ -98,7 +98,7 @@ aside {
 /***/
 
 section.biblio {
-  height: 65%;
+  height: 70%;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
@@ -106,7 +106,12 @@ section.biblio {
   overflow-y: scroll;
   padding-bottom: 10px;
 }
-section.biblio::-webkit-scrollbar{display: none;}
+
+@media (height < 850px) {
+  section.biblio {
+    height: 65%;
+  }
+}
 
 .shelf {
   cursor: pointer;

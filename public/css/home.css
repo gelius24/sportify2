@@ -143,18 +143,16 @@ h3 {
     color: rgb(150, 150, 150);
 }
 
-/**/
-.new-releases {
-    margin-bottom: 50px;
-}
 
+
+
+/*MAIN CARDS GRID RESIZING*/
 @media (width < 1531px) {
     .cards .card:last-child{display: none;}
     .cards{
         --cells: 5;
     }
 }
-
 @media (width < 1381px) {
     .cards .card:last-child,
     .cards .card:nth-last-child(2)
@@ -166,7 +164,6 @@ h3 {
         --asideWidth: 350px;
     }
 }
-
 @media (width < 1040px) {
     .cards .card:last-child,
     .cards .card:nth-last-child(2),
@@ -177,7 +174,6 @@ h3 {
         --gap: 30px;
     }
 }
-
 @media (width < 942px) {
     .cards .card:last-child,
     .cards .card:nth-last-child(2),

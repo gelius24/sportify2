@@ -1,0 +1,24 @@
+/*TABLETS*/
+@media (width <= 820px) and (height <= 1180px) {
+    :root {
+        --asideWidth: 30%;
+    }
+
+    .top-box {
+        height: 100%;
+    }
+
+    .bot-box {
+        display: none;
+    }
+
+    .cards .card:nth-last-child(4)
+    {display: block;}
+
+    .cards{
+        --cells: 3;
+        --gap: 30px;
+        grid-template-columns: 1fr 1fr 1fr;
+        overflow-x: scroll;
+    }
+}
