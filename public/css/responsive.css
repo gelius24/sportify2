@@ -1,5 +1,5 @@
 /*TABLETS*/
-@media (width <= 905px) and (height <= 1510px) {
+@media (width <= 905px) {
   :root {
     --asideWidth: 30%;
   }
