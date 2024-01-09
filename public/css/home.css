@@ -18,15 +18,8 @@ h3 {
     grid-template-rows: repeat(2, 64px); 
     gap: 10px;
 }
-.top-music-grid p {
-    margin-left: 20px;
-    text-wrap: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
 
-
-.top-music-grid div{
+.top-music-grid div {
     cursor: pointer;
     color: white;
     border-radius: 3px;
@@ -40,8 +33,15 @@ h3 {
     width: 64px;
     height: 64px;
     display: block;
-    border-radius: 3px;
-    
+    border-radius: 3px; 
+}
+
+
+.top-music-grid p {
+    margin-left: 20px;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 @media (width < 1125px) {
@@ -68,22 +68,11 @@ h3 {
     }
 }
 
-/*
-    RECENT SONGS
-    recents > cards > card
-*/
-.recents{
-    width: 100%;
-}
-
 .cards {
-    --cells: 6;
-    --gap: 24px;
     display: grid;
-    grid-template-columns: repeat(var(--cells), calc(
-        (100%/var(--cells)) - 20px 
-        ));
-    gap: var(--gap);
+    grid-template-columns: repeat(6, 180px); /*180x260*/
+    gap: 24px;
+    overflow-x: scroll;
 }
 
 .card{
@@ -136,56 +125,14 @@ h3 {
     text-wrap: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 82%;
 }
 .songAuthor {
-    max-height: 25px;
     color: rgb(150, 150, 150);
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 
-
-
-/*MAIN CARDS GRID RESIZING*/
-@media (width < 1531px) {
-    .cards .card:last-child{display: none;}
-    .cards{
-        --cells: 5;
-    }
-}
-@media (width < 1381px) {
-    .cards .card:last-child,
-    .cards .card:nth-last-child(2)
-    {display: none;}
-    .cards{
-        --cells: 4;
-    }
-    :root{
-        --asideWidth: 350px;
-    }
-}
-@media (width < 1040px) {
-    .cards .card:last-child,
-    .cards .card:nth-last-child(2),
-    .cards .card:nth-last-child(3)
-    {display: none;}
-    .cards{
-        --cells: 3;
-        --gap: 30px;
-    }
-}
-@media (width < 942px) {
-    .cards .card:last-child,
-    .cards .card:nth-last-child(2),
-    .cards .card:nth-last-child(3),
-    .cards .card:nth-last-child(4)
-    {display: none;}
-    .cards{
-        grid-template-columns: 1fr 1fr;
-        overflow-x: hidden;
-    }
-    .card{ width: 214px;}
-    .playbtn{right: 32px;}
-}
 
 

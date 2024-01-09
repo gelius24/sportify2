@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
+* { box-sizing: border-box; padding: 0;  margin: 0;}
 
 :root {
-    --spotifyBlack: #121212;
+    --authorColor: #a7a7a7;
+    --hoverColor: #1a1a1a;
+    --boxColor: #121212;
+    --background-tinted-highlight: hsla(0,0%,100%,.1);
+
     --spotifyBlackFonce: #191414; 
     --spotifyGreen: #1DB954;
     --spotifyLightGrey: #b3b3b3;

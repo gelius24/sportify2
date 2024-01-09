@@ -1,14 +1,12 @@
 aside {
-  font-size: 1rem;
-  font-weight: 700;
   color: var(--spotifyLightGrey);
   margin: 8px 8px 14px 8px;
   height: 100%;
 }
 
-/* TOP */
+/* TOP BOX */
 .top-box {
-  background-color: var(--spotifyBlack);
+  background-color: var(--boxColor);
   height: 10vh;
   min-height: 120px;
   padding: 20px; 
@@ -24,73 +22,59 @@ aside {
 /*BOTTOM BOX */
 .bot-box {
   margin-top: 10px;
-  background-color: var(--spotifyBlack);
+  background-color: var(--boxColor);
   width: 100%;
-  /* padding: 15px 20px 10px 20px; */
   padding: 20px;
   padding-bottom: 0px;
   border-radius: 5px;
   height: 90vh;
 }
 
-.asideBottom-line1 {
+.bot-box-row1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
 }
-
-.asideBottom-line2 {
+.bot-box-row1 .btn:hover:first-child,
+.fa-magnifying-glass:hover,
+.recentBtn:hover{ color: white;}
+/**/
+.bot-box-row2 {
   display: flex;
   gap: 8px;
   position: relative;
   overflow-x: scroll;
 }
 
-.asideBottom-line2::-webkit-scrollbar {
-  display: none;
-}
+.bot-box-row2::-webkit-scrollbar {display: none;}
 
-.asideBottom-line2 p {
+.filterBtn {
+  padding: 10px;
+  border-radius: 100px;
   color: rgb(233, 233, 233);
-  background-color: hsla(0, 0%, 100%, 0.1);
+  background-color: var(--background-tinted-highlight);
   font-size: 0.8rem;
   margin-bottom: 20px;
   text-wrap: nowrap;
 }
-
-.btn2 {
-  border-radius: 100px;
-  padding: 16px;
-  transition: color 0.2s ease,
-    /*transition: background-color 0.2s ease 0s, color 0.2s ease 0s;*/
-      border-radius 0.2s,
-    background-color 0.2s ease;
+.filterBtn:hover {
+ opacity: 0.9;
 }
 
-.btn2:hover {
-  color: #a7a7a7;
-  border-radius: 100px;
-  background-color: var(--spotifyBlackFonce);
-}
 
-.btn3 {
+
+.cmd {
+  border-radius: 100px;
   padding: 10px;
-  border-radius: 100px;
-  background-color: var(--spotifyBlackFonce);
-  border-radius: 100px;
+  transition: background-color 0.2s ease;
+}
+.cmd:hover { 
+  background-color: var(--hoverColor); 
+  opacity: 0.7;
 }
 
-.btn3:hover {
-  background-color: #1a1414;
-}
-
-.btnS1 {
-  position: absolute;
-  right: -5px;
-}
-
-.asideBottom-line3 {
+.bot-box-row3 {
   justify-content: space-between;
 }
 
@@ -137,9 +121,10 @@ section.biblio {
   font-size: 0.8rem;
 }
 
-/**/
+/*utility classes*/
 .btn {cursor: pointer;}
 .flex {
   display: flex;
+  align-items: center;
   gap: 20px;
 }

@@ -1,5 +1,5 @@
 main {
-    background-color: var(--spotifyBlack);
+    background-color: var(--boxColor);
     padding: 20px;
     margin: 8px 8px 0 0;
     border-radius: 10px;
@@ -17,13 +17,7 @@ header {
 .arrows {
     color: white;
     display: flex;
-    gap: 15px;
-}
-
-.arrows .btn{
-    padding: 8px;
-    background-color: rgba(0, 0, 0, 0.808);
-    border-radius: 100%;
+    gap: 18px;
 }
 
 .right-side {
@@ -37,6 +31,7 @@ header {
     border-radius: 20px;
     padding: 10px 18px;
     font-size: 0.875rem;
+    height: fit-content;
 }
 
 .premiumBtn{
@@ -52,15 +47,12 @@ header {
 }
 
 .right-side span {
-    background-color: black;
-    border-radius: 100%;
     padding: 7px;
-    
 }
 
 .avatar-box{
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     background-color: black;
     border-radius: 100%;
 }
