@@ -21,7 +21,11 @@
     display: none;
   }
   body {
-    display: block;
+    display: inline;
+    overflow-y: scroll;
+  }
+  main{
+    margin: auto;
   }
   .top-music-grid .fa-solid {
     display: none !important;
