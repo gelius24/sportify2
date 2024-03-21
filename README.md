@@ -1,2 +1,2 @@
-A vanilla JS spotity app.
-need CLIENT_ID, CLIENT_SECRET and REDIRECTION variables (.env file) calledw with process.env.[variable name]
+This is a NodeJS app who use the Spotify Web API. The frontend is in html, css & js. 
+https://spotify-clone-wg.onrender.com
